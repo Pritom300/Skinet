@@ -58,3 +58,4 @@ C:\Users\Pritom\Desktop\demo\skinet\API\bin\Debug\net6.0\Infrastructure.pdb
 C:\Users\Pritom\Desktop\demo\skinet\API\bin\Debug\net6.0\Core.pdb
 C:\Users\Pritom\Desktop\demo\skinet\API\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\Pritom\Desktop\demo\skinet\API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Pritom\Desktop\demo\skinet\API\bin\Debug\net6.0\API.staticwebassets.runtime.json
