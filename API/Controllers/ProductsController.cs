@@ -34,9 +34,9 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task< ActionResult<IReadOnlyList<ProductToReturnDto>>> GetProducts(string sort, int? brandId, int? typeId)
+        public async Task< ActionResult<IReadOnlyList<ProductToReturnDto>>> GetProducts([FromQuery] ProductSpecParams productParams)
         {
-            var spec = new ProductsWithTypesAndBrandsSpecification(sort, brandId, typeId);                                           //For Generic (For Just Include Statement)
+            var spec = new ProductsWithTypesAndBrandsSpecification(productParams);                                           //For Generic (For Just Include Statement)
             
             var product = await _productsRepo.ListAsync(spec);                                                  //*Generic    
                                                                                                                 // return product.Select(product => new ProductToReturnDto{ 
