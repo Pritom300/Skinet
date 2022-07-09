@@ -52,13 +52,15 @@ namespace API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPIv5", Version = "v1" });
             });
 
-            services.AddCors(opt =>
-            {
-                opt.AddPolicy("CorsPolicy", policy =>
-                {
-                    policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200/");
-                });
-            });
+            services.AddCors();
+
+            // services.AddCors(opt =>
+            // {
+            //     opt.AddPolicy("CorsPolicy", policy =>
+            //     {
+            //         policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200/");
+            //     });
+            // });
 
         }
 
@@ -80,9 +82,11 @@ namespace API
 
             app.UseRouting();
 
+            app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
+
             app.UseStaticFiles();
 
-            app.UseCors("CorsPolicy");
+            //app.UseCors("CorsPolicy");
 
             app.UseAuthorization();
 
