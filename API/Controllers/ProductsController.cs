@@ -39,7 +39,7 @@ namespace API.Controllers
         {
             var spec = new ProductsWithTypesAndBrandsSpecification(productParams);                                           //For Generic (For Just Include Statement)
             
-            var product = await _productsRepo.ListAsync(spec);
+            //var product = await _productsRepo.ListAsync(spec);
             
             var countSpec = new ProductsWithFiltersForCountSpecification(productParams);
 
